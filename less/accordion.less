@@ -1,0 +1,12 @@
+.hook-accordion-title() {
+  background: @bc-heading-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  &::selection {
+    background: none;
+    background-color: @bc-color;
+    color: white;
+    -webkit-text-fill-color: @bc-background;
+  }
+}

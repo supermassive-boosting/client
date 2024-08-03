@@ -1,0 +1,23 @@
+@keyframes supermassivebutton {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hook-button() {
+  border-radius: @bc-notification-radius;
+}
+
+.supermassive-button {
+  background: @bc-boosted-color;
+  background-size: 600%;
+  animation: supermassivebutton 16s linear infinite;
+}
