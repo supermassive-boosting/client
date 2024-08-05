@@ -1,12 +1,16 @@
 {
-  "name": "electron-vue-vite",
-  "version": "28.0.0",
+  "name": "supermassive",
+  "version": "0.0.1",
   "main": "dist-electron/main/index.js",
-  "description": "Really simple Electron + Vue + Vite boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
-  "license": "MIT",
+  "description": "Supermassive desktop application",
+  "author": "Yankı Küçük <kendinikertenkelebek@me.com>",
+  "license": "Apache-2.0",
   "private": true,
   "keywords": [
+    "supermassive",
+    "community",
+    "world of warcraft",
+    "boosting",
     "electron",
     "rollup",
     "vite",
@@ -35,6 +39,7 @@
     "vite-plugin-electron": "^0.28.7",
     "vite-plugin-electron-renderer": "^0.14.5",
     "vue": "^3.4.35",
+    "vue-i18n": "^9.13.1",
     "vue-router": "^4.4.2",
     "vue-tsc": "^2.0.29"
   }

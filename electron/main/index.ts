@@ -31,7 +31,7 @@ async function createWindow() {
     icon: join(process.env.VITE_PUBLIC, 'favicon.ico'),
     autoHideMenuBar: true,
     width: 1600,
-    height: 900,
+    height: 1000,
     resizable: false,
     webPreferences: {
       nodeIntegration: true,

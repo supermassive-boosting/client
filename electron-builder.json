@@ -1,33 +1,45 @@
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
-  "appId": "YourAppID",
-  "asar": true,
-  "productName": "YourAppName",
+  "productName": "Supermassive",
+  "appId": "com.app.supermassive",
+  "nodeVersion": "20.15.0",
+  "electronVersion": "31.3.1",
   "directories": {
     "output": "release/${version}"
   },
   "files": ["dist", "dist-electron"],
-  "mac": {
-    "target": ["dmg"],
-    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
-  },
+  "publish": [
+    {
+      "provider": "github",
+      "repo": "VaultMini",
+      "owner": "yankikucuk",
+      "publisherName": ["PlayerBerry Inc."]
+    }
+  ],
   "win": {
+    // "icon": "public/icons/windows/icon.ico",
+    "artifactName": "${productName}-Windows-${version}-Setup.${ext}",
     "target": [
       {
         "target": "nsis",
         "arch": ["x64"]
       }
-    ],
-    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+    ]
   },
   "nsis": {
-    "oneClick": false,
+    "oneClick": true,
     "perMachine": false,
-    "allowToChangeInstallationDirectory": true,
-    "deleteAppDataOnUninstall": false
+    "allowToChangeInstallationDirectory": false,
+    "createStartMenuShortcut": true,
+    // "installerHeaderIcon": "public/icons/windows/icon.ico",
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": true
   },
-  "linux": {
-    "target": ["AppImage"],
-    "artifactName": "${productName}-Linux-${version}.${ext}"
-  }
+  "protocols": [
+    {
+      "name": "supermassive",
+      "role": "Viewer",
+      "schemes": ["supermassive"]
+    }
+  ]
 }
