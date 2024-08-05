@@ -11,8 +11,8 @@
   "publish": [
     {
       "provider": "github",
-      "repo": "supermassive-boosting",
-      "owner": "yankikucuk",
+      "repo": "App",
+      "owner": "supermassive-boosting",
       "publisherName": ["Supermassive Boosting Community"]
     }
   ],
