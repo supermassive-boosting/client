@@ -1,7 +1,10 @@
 import fs from 'node:fs';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import electron from 'vite-plugin-electron/simple';
+import eslintPlugin from 'vite-plugin-eslint';
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import pkg from './package.json';
 
 // https://vitejs.dev/config/
@@ -45,6 +48,11 @@ export default defineConfig(({ command }) => {
         // If you want use Node.js in Renderer process, the `nodeIntegration` needs to be enabled in the Main process.
         // See 👉 https://github.com/electron-vite/vite-plugin-electron-renderer
         renderer: {},
+      }),
+      eslintPlugin(),
+      VueI18nPlugin({
+        // you need to set i18n resource including paths!
+        include: path.resolve(__dirname, './i18n/**'),
       }),
     ],
     server:
