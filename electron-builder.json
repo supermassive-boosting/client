@@ -11,9 +11,9 @@
   "publish": [
     {
       "provider": "github",
-      "repo": "VaultMini",
+      "repo": "supermassive-boosting",
       "owner": "yankikucuk",
-      "publisherName": ["PlayerBerry Inc."]
+      "publisherName": ["Supermassive Boosting Community"]
     }
   ],
   "win": {

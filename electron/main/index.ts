@@ -7,14 +7,14 @@ import { fileURLToPath } from 'node:url';
 process.on('uncaughtException', (err, _) => {
   const dialogOpts: Electron.MessageBoxOptions = {
     type: 'error',
-    title: 'Vault: Mini',
-    message: 'An error occured while running Vault: Mini and it will now quit. To report the issue, click Report.',
+    title: 'Supermassive',
+    message: 'An error occured while running Supermassive and it will now quit. To report the issue, click Report.',
     buttons: ['Report', 'OK'],
   };
 
   dialog.showMessageBox(dialogOpts).then(returnValue => {
     if (returnValue.response === 0) {
-      shell.openExternal('https://github.com/playerberry/VaultMini/issues');
+      shell.openExternal('https://github.com/supermassive-boosting/App/issues');
     }
     app.quit();
   });
