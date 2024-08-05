@@ -1,1 +1,7 @@
 src/assets/
+dist-electron/
+dist/
+node_modules/
+i18n/
+less/
+public/

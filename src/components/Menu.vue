@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+  import { RouterLink } from 'vue-router';
 </script>
 
 <template>
@@ -18,9 +18,7 @@ import { RouterLink } from 'vue-router';
             </ul>
           </div>
           <div class="uk-navbar-center">
-            <a class="uk-navbar-item uk-logo"
-              ><span class="supermassive-text">Supermassive</span></a
-            >
+            <a class="uk-navbar-item uk-logo"><span class="supermassive-text">Supermassive</span></a>
           </div>
           <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
