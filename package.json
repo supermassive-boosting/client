@@ -25,8 +25,11 @@
   "type": "module",
   "scripts": {
     "web": "",
-    "app": "vite --config vite.config.ts",
+    "dev": "vite --config vite.config.ts",
     "build": "vue-tsc --noEmit && vite build && electron-builder",
+    "clean": "git clean -xdf node_modules dist dist-electron",
+    "lint": "eslint . --cache --ext .ts,.js,.vue && prettier . --check --cache",
+    "lint:fix": "eslint . --ext .ts,.js,.vue --fix && prettier . --write",
     "preview": "vite preview"
   },
   "dependencies": {
